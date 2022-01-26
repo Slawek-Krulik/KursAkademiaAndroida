@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.core.app.di
+package com.example.kursakademiaandroida.core.di
 
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager

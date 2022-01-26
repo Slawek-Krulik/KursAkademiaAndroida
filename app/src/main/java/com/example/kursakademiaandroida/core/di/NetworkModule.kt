@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.core.app.di
+package com.example.kursakademiaandroida.core.di
 
 import com.example.kursakademiaandroida.BuildConfig
 import com.example.kursakademiaandroida.features.RickAndMortyApi

@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.core.app.di
+package com.example.kursakademiaandroida.core.di
 
 import org.koin.core.module.Module
 

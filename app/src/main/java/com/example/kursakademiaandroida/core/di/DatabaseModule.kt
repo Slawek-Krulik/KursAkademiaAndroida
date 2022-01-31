@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.core.app.di
+package com.example.kursakademiaandroida.core.di
 
 import androidx.room.Room
 import com.example.kursakademiaandroida.database.AppDatabase

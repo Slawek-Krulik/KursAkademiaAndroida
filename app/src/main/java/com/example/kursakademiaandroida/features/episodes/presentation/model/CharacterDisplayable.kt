@@ -1,17 +1,15 @@
 package com.example.kursakademiaandroida.features.episodes.presentation.model
 
 import com.example.kursakademiaandroida.features.episodes.domain.model.Character
-import com.example.kursakademiaandroida.features.episodes.domain.model.Location
-import com.example.kursakademiaandroida.features.episodes.domain.model.Origin
 
-class CharacterDisplayable(
+data class CharacterDisplayable(
     val id: Int,
     val episode: List<String>,
     val gender: String,
     val image: String,
-    val location: Location,
+    val location: LocationDisplayable,
     val name: String,
-    val origin: Origin,
+    val origin: OriginDisplayable,
     val species: String,
     val status: String,
     val type: String,
@@ -22,9 +20,9 @@ class CharacterDisplayable(
         episode = character.episode,
         gender = character.gender,
         image = character.image,
-        location = character.location,
+        location = LocationDisplayable(location = character.location),
         name = character.name,
-        origin = character.origin,
+        origin = OriginDisplayable(origin = character.origin),
         species = character.species,
         status = character.status,
         type = character.type,

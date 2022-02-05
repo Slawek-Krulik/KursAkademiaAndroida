@@ -2,7 +2,7 @@ package com.example.kursakademiaandroida.features.episodes.presentation.model
 
 import com.example.kursakademiaandroida.features.episodes.domain.model.Location
 
-class LocationDisplayable(
+data class LocationDisplayable(
     val id: Int,
     val name: String,
     val dimension: String,

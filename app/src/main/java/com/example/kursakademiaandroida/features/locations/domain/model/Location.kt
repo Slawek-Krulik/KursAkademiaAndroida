@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.features.episodes.domain.model
+package com.example.kursakademiaandroida.features.locations.domain.model
 
 data class Location(
     val id: Int,

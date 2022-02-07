@@ -1,6 +1,6 @@
 package com.example.kursakademiaandroida.features.data.remote.model
 
-import com.example.kursakademiaandroida.features.episodes.domain.model.Location
+import com.example.kursakademiaandroida.features.locations.domain.model.Location
 import com.google.gson.annotations.SerializedName
 
 

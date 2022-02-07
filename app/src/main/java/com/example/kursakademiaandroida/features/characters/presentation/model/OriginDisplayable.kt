@@ -1,6 +1,6 @@
-package com.example.kursakademiaandroida.features.episodes.presentation.model
+package com.example.kursakademiaandroida.features.characters.presentation.model
 
-import com.example.kursakademiaandroida.features.episodes.domain.model.Origin
+import com.example.kursakademiaandroida.features.characters.domain.model.Origin
 
 data class OriginDisplayable(
     val name: String,

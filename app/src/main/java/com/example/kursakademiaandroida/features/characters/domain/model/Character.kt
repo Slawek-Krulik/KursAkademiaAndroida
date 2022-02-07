@@ -1,11 +1,11 @@
-package com.example.kursakademiaandroida.features.episodes.domain.model
+package com.example.kursakademiaandroida.features.characters.domain.model
 
 data class Character(
     val id: Int,
     val episode: List<String>,
     val gender: String,
     val image: String,
-    val location: Location,
+    val location: CharacterLocation,
     val name: String,
     val origin: Origin,
     val species: String,

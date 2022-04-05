@@ -1,4 +1,4 @@
-package com.example.kursakademiaandroida.features.data.remote.model
+package com.example.kursakademiaandroida.core.api.model
 
 import com.example.kursakademiaandroida.features.episodes.domain.model.Episode
 import com.google.gson.annotations.SerializedName

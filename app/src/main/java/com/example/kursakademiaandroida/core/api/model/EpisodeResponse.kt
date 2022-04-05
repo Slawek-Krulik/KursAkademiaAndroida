@@ -6,4 +6,6 @@ class EpisodeResponse(
     @SerializedName("info") val info: ResponseInfo,
     @SerializedName("results") val results: List<EpisodeRemote>
 ) {
+
+    companion object
 }

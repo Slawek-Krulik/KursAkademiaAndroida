@@ -1,10 +1,12 @@
 package com.example.kursakademiaandroida.features.locations.data.local.model
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.example.kursakademiaandroida.features.locations.domain.model.Location
 
 @Entity
 data class LocationCached(
+    @PrimaryKey
     val id: Int,
     val name: String,
     val dimension: String,
@@ -20,6 +22,8 @@ data class LocationCached(
         location.type,
         location.url
     )
+
+    companion object
 
     fun toLocation() = Location(
         id = id,

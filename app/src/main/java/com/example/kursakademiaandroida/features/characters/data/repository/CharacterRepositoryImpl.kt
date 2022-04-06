@@ -27,8 +27,8 @@ class CharacterRepositoryImpl(
             .map { it.toCharacter() }
     }
 
-    private suspend fun saveCharacterToLocal(episodes: List<Character>) {
-        episodes.map { CharacterCached(it) }
+    private suspend fun saveCharacterToLocal(characters: List<Character>) {
+        characters.map { CharacterCached(it) }
             .toTypedArray()
             .let { characterDao.saveCharacters(*it) }
     }

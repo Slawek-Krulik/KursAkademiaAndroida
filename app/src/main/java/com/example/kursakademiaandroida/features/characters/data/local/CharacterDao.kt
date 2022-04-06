@@ -9,7 +9,7 @@ import com.example.kursakademiaandroida.features.characters.data.local.model.Cha
 @Dao
 interface CharacterDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun saveCharacters(vararg episode: CharacterCached) //vararg means that we can pass many objects of CharacterCached type
+    suspend fun saveCharacters(vararg character: CharacterCached) //vararg means that we can pass many objects of CharacterCached type
 
     @Query("SELECT * FROM CharacterCached")
     suspend fun getCharacters(): List<CharacterCached>

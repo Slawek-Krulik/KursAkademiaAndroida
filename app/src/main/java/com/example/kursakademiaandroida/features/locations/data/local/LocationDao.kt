@@ -13,5 +13,5 @@ interface LocationDao {
     suspend fun saveLocations(vararg location: LocationCached) //vararg means that we can pass many objects of EpisodeCached type
 
     @Query("SELECT * FROM LocationCached")
-    suspend fun getEpisodes(): List<LocationCached>
+    suspend fun getLocations(): List<LocationCached>
 }

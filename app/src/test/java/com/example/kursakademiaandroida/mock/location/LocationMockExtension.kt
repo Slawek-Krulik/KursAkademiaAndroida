@@ -6,14 +6,6 @@ import com.example.kursakademiaandroida.mock.mock
 import org.jetbrains.annotations.TestOnly
 import org.junit.jupiter.api.Test
 
-//@TestOnly
-//fun ResponseInfo.Companion.mock() = ResponseInfo(
-//    count = 10,
-//    pages = 3,
-//    next = "next page url",
-//    prev = "previous page url"
-//)
-
 @TestOnly
 fun LocationRemote.Companion.mock() = LocationRemote(
     id = 1,

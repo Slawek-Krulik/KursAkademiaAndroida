@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.kursakademiaandroida.features.characters.domain.model.Character
 import com.example.kursakademiaandroida.features.characters.domain.model.CharacterLocation
-import com.example.kursakademiaandroida.features.characters.domain.model.Origin
+import com.example.kursakademiaandroida.features.characters.domain.model.CharacterOrigin
 
 @Entity
 data class CharacterCached(
@@ -14,9 +14,11 @@ data class CharacterCached(
     val episode: List<String>,
     val gender: String,
     val image: String,
-    @Embedded(prefix = "CharacterLocationCached") val location: CharacterLocation,
+    @Embedded(prefix = "CharacterLocationCached")
+    val location: CharacterLocationCached,
     val name: String,
-    @Embedded(prefix = "CharacterOriginCached") val origin: Origin,
+    @Embedded(prefix = "CharacterOriginCached")
+    val origin: CharacterOriginCached,
     val species: String,
     val status: String,
     val type: String,
@@ -27,9 +29,9 @@ data class CharacterCached(
         character.episode,
         character.gender,
         character.image,
-        character.location,
+        CharacterLocationCached(character.location),
         character.name,
-        character.origin,
+        CharacterOriginCached(character.origin),
         character.species,
         character.status,
         character.type,
@@ -43,12 +45,46 @@ data class CharacterCached(
         episode = episode,
         gender = gender,
         image = image,
-        location = location,
+        location = location.toCharacterLocation(),
         name = name,
-        origin = origin,
+        origin = origin.toCharacterOrigin(),
         species = species,
         status = status,
         type = type,
         url = url
     )
+
+    data class CharacterOriginCached(
+        val name: String,
+        val url: String
+    ) {
+        constructor(characterOrigin: CharacterOrigin) : this(
+            name = characterOrigin.name,
+            url = characterOrigin.url
+        )
+
+        companion object
+
+        fun toCharacterOrigin() = CharacterOrigin(
+            name = name,
+            url = url
+        )
+    }
+
+    data class CharacterLocationCached(
+        val name: String,
+        val url: String
+    ) {
+        constructor(characterLocation: CharacterLocation) : this(
+            name = characterLocation.name,
+            url = characterLocation.url
+        )
+
+        companion object
+
+        fun toCharacterLocation() = CharacterLocation(
+            name = name,
+            url = url
+        )
+    }
 }

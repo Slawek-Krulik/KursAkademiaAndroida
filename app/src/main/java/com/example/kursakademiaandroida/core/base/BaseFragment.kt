@@ -7,7 +7,7 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 
-abstract class BaseFragment<T : BaseViewModel>(@LayoutRes layoutRes: Int) : Fragment() {
+abstract class BaseFragment<T : BaseViewModel>(@LayoutRes layoutRes: Int) : Fragment(layoutRes) {
 
     abstract val viewModel: T
 

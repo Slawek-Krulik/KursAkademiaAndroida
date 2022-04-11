@@ -2,15 +2,10 @@ package com.example.kursakademiaandroida.features.characters.data.repository
 
 import com.example.kursakademiaandroida.core.api.RickAndMortyApi
 import com.example.kursakademiaandroida.core.api.model.CharacterResponse
-import com.example.kursakademiaandroida.core.api.model.EpisodeResponse
 import com.example.kursakademiaandroida.core.network.NetworkStateProvider
 import com.example.kursakademiaandroida.features.characters.data.local.CharacterDao
 import com.example.kursakademiaandroida.features.characters.data.local.model.CharacterCached
-import com.example.kursakademiaandroida.features.episodes.data.local.EpisodeDao
-import com.example.kursakademiaandroida.features.episodes.data.local.model.EpisodeCached
-import com.example.kursakademiaandroida.features.episodes.data.repository.EpisodeRepositoryImpl
 import com.example.kursakademiaandroida.mock.character.mock
-import com.example.kursakademiaandroida.mock.mock
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every

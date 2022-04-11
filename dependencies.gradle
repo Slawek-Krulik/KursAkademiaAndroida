@@ -72,6 +72,7 @@ ext{
     //database dependencies
     def roomVersion = "2.4.1"
     databaseDependencies = [
-            roomRuntime: "androidx.room:room-runtime:" + roomVersion
+            roomRuntime: "androidx.room:room-runtime:" + roomVersion,
+            roomRuntime: "androidx.room:room-ktx:" + roomVersion
     ]
 }

@@ -5,10 +5,24 @@
     android:layout_height="match_parent"
     tools:context=".features.episodes.presentation.EpisodeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/episode_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/episode_progress_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Episode fragment" />
+        android:visibility="gone"
+        android:background="@color/black_alpha"
+        android:clickable="true">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:theme="@style/Widget.AppCompat.ProgressBar" />
+    </RelativeLayout>
 
 </FrameLayout>

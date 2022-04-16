@@ -47,9 +47,9 @@ class LocationAdapter :
         private val type: TextView = view.findViewById(R.id.location_type)
 
         fun bind(item: LocationDisplayable) {
-            name.text = item.name
-            dimension.text = item.dimension
-            type.text = item.type
+            name.text = "Name: ${item.name}"
+            dimension.text = "Dimen: ${item.dimension}"
+            type.text = "Type: ${item.type}"
         }
     }
 

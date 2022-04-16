@@ -25,6 +25,7 @@ class LocationViewModel(private val getLocationUseCase: GetLocationUseCase) : Ba
     private fun getLocation(locationLiveData: MutableLiveData<List<Location>>) {
         setPendingState()
         getLocationUseCase(params = Unit, scope = viewModelScope) { result ->
+            setIdleState()
             result.onSuccess { locationLiveData.value = it }
             result.onFailure { handleFailure(it) }
         }

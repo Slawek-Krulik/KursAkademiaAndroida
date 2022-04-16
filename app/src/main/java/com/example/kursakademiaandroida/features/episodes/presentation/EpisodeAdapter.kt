@@ -47,9 +47,9 @@ class EpisodeAdapter :
         private val airDate: TextView = view.findViewById(R.id.episode_air_date)
 
         fun bind(episode: EpisodeDisplayable) {
-            name.text = episode.name
-            code.text = episode.code
-            airDate.text = episode.airDate
+            name.text = "Name: ${episode.name}"
+            code.text = "Code: ${episode.code}"
+            airDate.text = "AirDate: ${episode.airDate}"
         }
 
     }

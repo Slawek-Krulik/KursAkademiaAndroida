@@ -5,6 +5,8 @@ import android.net.ConnectivityManager
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kursakademiaandroida.core.exception.ErrorMapper
+import com.example.kursakademiaandroida.core.exception.ErrorMapperImpl
 import com.example.kursakademiaandroida.core.exception.ErrorWrapper
 import com.example.kursakademiaandroida.core.exception.ErrorWrapperImpl
 import com.example.kursakademiaandroida.core.network.NetworkStateAvailableImpl
@@ -31,4 +33,6 @@ val appModule = module {
     factory<NetworkStateProvider> { NetworkStateAvailableImpl(get()) }
 
     factory<ErrorWrapper> { ErrorWrapperImpl() }
+
+    factory<ErrorMapper> { ErrorMapperImpl(androidContext()) }
 }

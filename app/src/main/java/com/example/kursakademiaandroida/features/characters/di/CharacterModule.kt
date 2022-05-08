@@ -16,6 +16,6 @@ val characterModule = module {
     factory { GetCharacterUseCase(get()) }
 
     //presentation
-    viewModel { CharacterViewModel(get()) }
+    viewModel { CharacterViewModel(get(), get()) }
     factory { CharacterFragment() }
 }
